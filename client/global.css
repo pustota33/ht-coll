@@ -1,0 +1,140 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * Keep color variables in HSL format for Tailwind theme consumption
+  */
+  :root {
+    /* Brand: dark/industrial */
+    --background: 0 0% 4%; /* #0A0A0A */
+    --foreground: 0 0% 95%; /* #F3F3F3 */
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Accent purple (#9C27FF) */
+    --primary: 273 100% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary surface (#1A1A1A) */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 273 100% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Hover accent (#FF005D) */
+    --destructive: 337 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 273 100% 57%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar (unused but kept consistent) */
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 273 100% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 273 100% 57%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 273 100% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 273 100% 57%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 337 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 273 100% 57%;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 273 100% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 273 100% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,h2,h3,h4,h5,h6 { @apply font-heading uppercase tracking-widest; }
+
+  /* Prose styling for blog content */
+  .prose h2 {
+    @apply text-xl font-semibold mt-6 mb-3 text-foreground not-italic;
+  }
+
+  .prose h3 {
+    @apply text-lg font-semibold mt-5 mb-2 text-foreground not-italic;
+  }
+
+  .prose p {
+    @apply text-muted-foreground leading-relaxed my-3;
+  }
+
+  .prose strong {
+    @apply text-foreground font-semibold;
+  }
+
+  .prose em {
+    @apply text-muted-foreground italic;
+  }
+
+  .prose ul, .prose ol {
+    @apply my-3 ml-6 text-muted-foreground;
+  }
+
+  .prose li {
+    @apply mb-1;
+  }
+}
